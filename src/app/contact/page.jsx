@@ -15,7 +15,7 @@ export default function ContactPage() {
         }
     }
   return (
-    <div>
+    <div className='min-h-screen flex items-center justify-center flex-col'>
       <h1>Contact Us</h1>
       <p>If you have any questions, feel free to reach out!</p>
       <Link href="/contact/address" className='underline'><p>address page</p></Link>

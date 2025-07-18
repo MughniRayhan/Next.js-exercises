@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import React from 'react'
 
 export default function ServiceDetailPage({ params }) {
@@ -55,8 +56,10 @@ export default function ServiceDetailPage({ params }) {
 
     const id = params.id;
     const service = services.find(service => service.id == id);
+    if(service) {
   return (
-    <div className='p-4 space-y-1'>
+    <div className='min-h-screen flex items-center justify-center'>
+      <div className='p-4 space-y-1'>
       <h1>Service Detail:</h1>
       <img src={service.image} alt={service.name} className="w-64 h-64 mx-auto object-cover rounded-full" />
       <p>Details for service ID: {id}</p>
@@ -65,5 +68,16 @@ export default function ServiceDetailPage({ params }) {
       <p>Duration: {service.duration}</p>
       <p>Description: {service.description}</p>
     </div>
+    </div>
   )
+}
+
+else {
+  return (
+    <div className='min-h-screen flex items-center justify-center'>
+      <p className='text-red-400 text-3xl font-bold'>404 not found </p>
+      <Link href='/'><button className='ml-4 px-4 py-2 bg-blue-500 text-white rounded'>Go to Home</button></Link>
+    </div>
+  )
+} 
 }

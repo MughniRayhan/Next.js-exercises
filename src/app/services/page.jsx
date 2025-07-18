@@ -55,7 +55,7 @@ export default function ServicesPage() {
 ];
 
   return (
-    <div>
+    <div className='min-h-screen flex flex-col items-center justify-center p-4'>
       <h1 className='text-2xl font-bold'>Our Services</h1>
       <p>We offer a variety of services to meet your needs.</p>
       <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mt-4'>
