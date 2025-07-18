@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import React from 'react'
 
 export default function NavBar() {
@@ -5,21 +6,15 @@ export default function NavBar() {
     <div>
       <nav>
           <ul className="flex items-center justify-between p-4 bg-gray-800 text-white">
-            <li>
-              <a href="/" className="hover:underline">
-                Home
-              </a>
-            </li>
-            <li>
-              <a href="/about" className="hover:underline">
-                About
-              </a>
-            </li>
-            <li>
-              <a href="/contact" className="hover:underline">
-                Contact
-              </a>
-            </li>
+            <Link href="/">
+               <li> Home </li>
+            </Link>
+            <Link href="/about">
+              <li> About </li>
+            </Link>
+            <Link href="/contact">
+              <li> Contact </li>
+            </Link>
           </ul>
         </nav>
     </div>
