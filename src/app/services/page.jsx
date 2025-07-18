@@ -56,17 +56,19 @@ export default function ServicesPage() {
 
   return (
     <div>
-      <h1>Our Services</h1>
+      <h1 className='text-2xl font-bold'>Our Services</h1>
       <p>We offer a variety of services to meet your needs.</p>
-      {
+      <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mt-4'>
+        {
         services.map(service => (
-          <div key={service.id} className="service-card">
+          <div key={service.id} className="service-card bg-white text-gray-700 p-4 rounded-lg shadow hover:bg-gray-200 transition-shadow">
             <Link href={`/services/${service.id}`}>
               <h2 className="text-xl font-bold">{service.name}</h2>
             </Link>
           </div>
         ))
         }
+      </div>
       
     </div>
   )
